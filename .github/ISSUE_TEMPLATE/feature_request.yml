@@ -1,0 +1,17 @@
+name: "Πρόταση βελτίωσης"
+description: "Πρότεινε μια νέα δυνατότητα για το dwrean.net Debloat"
+title: "[Πρόταση] "
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: "Τι θα ήθελες να προστεθεί;"
+      description: "Περιέγραψε την ιδέα με απλά λόγια."
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: "Ποιο πρόβλημα λύνει;"
+    validations:
+      required: true
