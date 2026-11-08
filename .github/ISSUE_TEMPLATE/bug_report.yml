@@ -1,0 +1,41 @@
+name: "Αναφορά προβλήματος"
+description: "Αν κάτι δεν λειτουργεί σωστά στο dwrean.net Debloat"
+title: "[Πρόβλημα] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ευχαριστούμε για την αναφορά. Μη δημοσιεύεις προσωπικά δεδομένα, κωδικούς ή ολόκληρα logs χωρίς έλεγχο.
+  - type: dropdown
+    id: windows
+    attributes:
+      label: "Έκδοση Windows"
+      options:
+        - "Windows 11 Home"
+        - "Windows 11 Pro"
+        - "Windows 11 Enterprise / Education"
+        - "Δεν γνωρίζω / Άλλη"
+    validations:
+      required: true
+  - type: input
+    id: menu
+    attributes:
+      label: "Επιλογή μενού"
+      description: "Ποια επιλογή χρησιμοποίησες; π.χ. 1 ή 5"
+      placeholder: "5"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Πώς αναπαράγεται το πρόβλημα;"
+      description: "Περίγραψε τα βήματα και τι περίμενες να συμβεί."
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: "Μήνυμα σφάλματος (χωρίς προσωπικά στοιχεία)"
+      render: text
+    validations:
+      required: false
