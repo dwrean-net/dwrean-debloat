@@ -175,10 +175,12 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\dwrean-debloat.ps1 -Pr
 
 ## 🔧 Έλεγχος, σχόλια και βελτιώσεις
 
-Ο κώδικας είναι ανοικτός για επιθεώρηση. Υπάρχει workflow για **συντακτικό έλεγχο** PowerShell στο GitHub Actions· αυτό **δεν** αποτελεί αυτόματη δοκιμή των αλλαγών σε πραγματικά Windows.
+Ο κώδικας είναι ανοικτός για επιθεώρηση. Η βασική λειτουργία έχει επιβεβαιωθεί από χρήστη στα Windows 11, αλλά δεν έχει γίνει πλήρης δοκιμή σε όλες τις διαμορφώσεις. Υπάρχει workflow για **συντακτικό έλεγχο** PowerShell στο GitHub Actions· αυτό **δεν** αποτελεί αυτόματη δοκιμή των αλλαγών σε πραγματικά Windows.
+
+**[Ιστορικό εκδόσεων](CHANGELOG.md)** · **[Πολιτική ασφάλειας](SECURITY.md)** · **[GitHub Actions](https://github.com/dwrean-net/dwrean-debloat/actions)**
 
 Για αναφορά προβλήματος ή πρόταση:
-**[Άνοιξε νέο Issue](https://github.com/dwrean-net/dwrean-debloat/issues/new)**.
+**[Αναφορά προβλήματος ή πρόταση βελτίωσης](https://github.com/dwrean-net/dwrean-debloat/issues/new/choose)**.
 
 Εάν αναφέρεις σφάλμα, είναι χρήσιμο να συμπεριλάβεις την έκδοση Windows, τον αριθμό επιλογής μενού και το μήνυμα σφάλματος. **Μην δημοσιεύεις προσωπικά στοιχεία ή ολόκληρα logs χωρίς έλεγχο.**
 
