@@ -1,14 +1,28 @@
-name: Έλεγχος σύνταξης PowerShell
+name: PowerShell syntax check
+
 on:
   push:
   pull_request:
 
 jobs:
   syntax:
+    name: Check Windows PowerShell 5.1 syntax
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Έλεγχος αρχείου PowerShell χωρίς εκτέλεση
+      - name: Parse dwrean-debloat.ps1 (without executing it)
         shell: powershell
         run: |
-          & .\ΕΛΕΓΧΟΣ-ΣΥΝΤΑΞΗΣ.ps1
+          $file = Join-Path (Get-Location) 'dwrean-debloat.ps1'
+          if (-not (Test-Path -LiteralPath $file)) {
+            Write-Error 'Main script not found'
+            exit 1
+          }
+          $tokens = $null
+          $errors = $null
+          $null = [System.Management.Automation.Language.Parser]::ParseFile($file, [ref]$tokens, [ref]$errors)
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Error $_.ToString() }
+            exit 1
+          }
+          Write-Host 'Windows PowerShell 5.1 syntax check passed.'
