@@ -1,0 +1,14 @@
+name: Έλεγχος σύνταξης PowerShell
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Έλεγχος αρχείου PowerShell χωρίς εκτέλεση
+        shell: powershell
+        run: |
+          & .\ΕΛΕΓΧΟΣ-ΣΥΝΤΑΞΗΣ.ps1
